@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem e Texto</title>
+    <style>
+        body {
+            background-color:  #f8f0da;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 90px;
+            background-color: #405cd8;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #FFC107;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 1s ease;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            color:  #f8f0da;
+            margin-top: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #FFA000;
+            border: none;
+            color: #405cd8;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            outline: none;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .button:hover {
+            animation: none;
+            transform: rotate(360deg);
+            background-color: #e79301;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Entendendo o Bootloader</h1>
+        <img src="data:image/png;base64,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" alt="Botão de Energia">
+        <p> O próximo passo é procurar um dispositivo para boot. Qualquer dispositivo, seja um sistema operacional instalado em um SSD de última geração ou um Live-DVD Linux para a instalação. O que depende, naturalmente, qual deles está programado para inicializar na BIOS/UEFI. 
+            Se você tem um sistema operacional instalado, ela procurará o bootloader no disco primário. 
+                
+            Esse bootloader está localizado na MBR do disco rígido (Master Boot Record) ou SSD. De forma simples, são os primeiros blocos de dados. Essa é uma das formas, já que máquinas mais modernas trazem uma partição EFI, que pode ser posicionada em qualquer parte do disco, trazendo basicamente a mesma função, que é armazenar o bootloader.
+            
+            O bootloader (“carregador de inicialização” do inglês, em tradução livre) faz exatamente isso: carrega o sistema operacional. Ou mesmo uma janela para que você escolha entre dois ou mais sistemas operacionais, como muitos usuários das distros Linux estão acostumados.
+        </p>
+        <p><input type="button" onclick="execut()" value="Ir para a proxima etapa" class="button"></p>
+    </div>
+          
+          <script>
+            function execut(){
+                window.location.href=`index6.html`
+            }
+          </script>
+</body>
+</html>

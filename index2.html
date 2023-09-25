@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem e Texto</title>
+    <style>
+        body {
+            background-color: #f8f0da;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 30px 50px;
+            background-color: #405cd8;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-family: 'Lucida Sans';
+            font-size: 24px;
+            color:#FFC107;
+        }
+
+        img {
+            max-width: 45%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #f8f0da;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color:  #FFA000;
+            border: none;
+            color: #405cd8;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.5s ease, background-color 0.3s;
+            outline: none;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        button:hover {
+            animation: none;
+            transform: rotate(360deg);
+            background-color: #e79301;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Entendendo o Botão de Energia</h1>
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25706.png" alt="Botão de Energia">
+        <p>
+            O botão de energia atua como um interruptor, permitindo a entrada da corrente elétrica para os componentes da máquina. Isso permite a entrada de energia, que passa pela fonte de alimentação, passando pelas conversões necessárias, até chegar a todos os componentes com a voltagem correta. A BIOS/UEFI assume o controle, realiza o POST (Power On Self Test), verifica se os componentes estão funcionando adequadamente e procura um dispositivo de inicialização. O bootloader carrega o sistema operacional e, finalmente, o sistema inicia para o uso.
+        </p>
+    
+    
+    <p><button onclick="execut()">Ir para a próxima etapa</button></p>
+    </div>
+    <script>
+        function execut() {
+            window.location.href = `index3.html`;
+        }
+    </script>
+</body>
+</html>

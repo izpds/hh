@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem e Texto</title>
+    <style>
+        body {
+            background-color:  #f8f0da;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 90px;
+            background-color: #405cd8;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #FFC107;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 1s ease;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            color:  #f8f0da;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #FFA000;
+            border: none;
+            color: #405cd8;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            outline: none;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        button:hover {
+            animation: none;
+            transform: rotate(360deg);
+            background-color: #e79301;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Entendendo a Area de Trabalho</h1>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrly6ofjUMGVql8Ml0qN5hEnkaFiayempHX6DMQFZu&s" alt="Botão de Energia">
+        <p> Depois de tudo isso a Area de trabalho é carregada, é o usuario pode executar seus aplicativos
+            como por exemplo o chrome, Bing e etc...
+        </p>
+        <p><button onclick="rotateAndNavigate()">Ir para a próxima etapa</button></p>
+    </div>
+    
+    
+    <script>
+        function rotateAndNavigate() {
+            const button = document.querySelector("button");
+            button.classList.add("rotate"); 
+            setTimeout(() => {
+                window.location.href = `index8.html`;
+            }, 1000); 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Entrada do Jogo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f0da;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #405cd8;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #f8f0da;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            justify-content: center;
+            padding: 5px;
+            margin: 10px 0px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color:#FFA000;
+            border: none;
+            color: #405cd8;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.5s ease, background-color 0.3s;
+            outline: none;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        button:hover {
+            animation: none;
+            transform: rotate(360deg);
+            background-color: #e79301;
+        }
+        p{
+            color:#f8f0da;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo à nossa Ac1!</h1>
+        <p>Por favor, digite seu nome para começar:</p>        
+        <input type="text" name="nome_do_jogador" placeholder="Seu Nome" required class="button">
+        <br>
+        <button type="submit" onclick="start()">Iniciar Programa</button>
+        <script>
+            function start() {
+                window.location.href = `index2.html`
+            }
+        </script>
+    </div>
+</body>
+</html>
